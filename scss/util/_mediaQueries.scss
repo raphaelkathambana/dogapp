@@ -1,0 +1,43 @@
+@use "colors" as col;
+@media (max-width: 768px) {
+    .navbar-items {
+        visibility: hidden;
+    }
+    .review {
+        display: flex;
+        flex-direction: column;
+        width: 550px;
+        align-items: flex-start;
+    }
+    .intro {
+        flex-direction: column;
+        margin-bottom: 30px;
+        & p {
+            max-width: 650px;
+        }
+        & .card {
+            text-align: center;
+        }
+    }
+    .blog-grid {
+        &-item {
+            font-size: small;
+            height: 150px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    #comment {
+        // max-width: 800px;
+        width: 700px;
+        height: 500px;
+    }
+    .navbar-title {
+        visibility: hidden;
+    }
+    .blog-grid {
+        &-item {
+            height: 350px;
+        }
+    }
+}

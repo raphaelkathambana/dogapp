@@ -1,0 +1,25 @@
+@use "../util" as util;
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin: 2rem 0;
+    &-item {
+        background-color: util.$secondaryColor;
+        min-height: 200px;
+        & p{
+            padding: 15px;
+            margin: 0;
+        }
+        & h3 {
+            padding: 0px 15px 0px;
+            margin: 0;
+        }
+    }
+}
+#comment {
+    min-height: 200px;
+    min-width: 300px;
+    padding: 20px;
+    margin-left: 10px;
+}
