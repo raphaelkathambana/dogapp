@@ -1,0 +1,82 @@
+{
+    "vscode-corda.isCordaProject": false,
+    "cSpell.words": [
+        "Bucovic",
+        "coveredstyles",
+        "Cunk",
+        "Gabe",
+        "pawsitively",
+        "pawsome",
+        "Philomena",
+        "signin",
+        "Sixpeeks",
+        "untree"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "DDLExercise",
+            "database": "hospital",
+            "username": "root",
+            "connectionTimeout": 300
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Server1Class",
+            "database": "hospital",
+            "username": "root",
+            "password": "ChoosePassword"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "AroonaxDBProject",
+            "database": "arronax",
+            "username": "root",
+            "password": "ChoosePassword"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "BankStuff",
+            "database": "Bank",
+            "username": "root",
+            "password": "ChoosePassword"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "dogappDb",
+            "database": "dogusers",
+            "username": "root"
+        }
+    ]
+}

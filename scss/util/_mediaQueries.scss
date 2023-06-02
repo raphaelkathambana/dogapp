@@ -26,13 +26,13 @@
         }
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     #comment {
         // max-width: 800px;
         width: 700px;
         height: 500px;
     }
-    .navbar-title {
+    .navbar-title, .hamburger-lines{
         visibility: hidden;
     }
     .blog-grid {
