@@ -230,6 +230,20 @@ a:hover {
     padding: 4rem 0;
   }
 }
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form-container .heading-icon {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.form-container .heading-icon img {
+  width: 55px;
+}
+
 .form-control {
   display: block;
   width: 360px;
@@ -524,6 +538,9 @@ footer ul li {
   background-repeat: no-repeat !important;
   background-origin: content-box !important;
   transition: background 0s ease 0s !important;
+}
+.form-subscribe input[type=email] {
+  background-color: #ffefeb;
 }
 
 .blog-grid {

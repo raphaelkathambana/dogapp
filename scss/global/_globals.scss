@@ -175,6 +175,21 @@ a {
         padding: 4rem 0;
     }
 }
+.form-container {
+    width: 100%;
+	max-width: 400px;
+    margin: 0 auto;
+
+    & .heading-icon {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        & img {
+            width: 55px;
+        }
+    }
+}
+
 .form-control {
     display: block;
     width: 360px;
@@ -461,6 +476,9 @@ footer {
     background-repeat: no-repeat !important;
     background-origin: content-box !important;
     transition: background 0s ease 0s !important;
+    & input[type="email"] {
+        background-color: #ffefeb;
+    }
 }
 
 // footer .form-subscribe .form-control:active,
