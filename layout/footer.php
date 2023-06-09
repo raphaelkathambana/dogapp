@@ -5,10 +5,10 @@
                 <h3>Quick Links</h3>
                 <p>
                     <a href="/">Home |</a>
-                    <a href="contact.html">Contact Us |</a>
-                    <a href="blog.html">Posts |</a>
-                    <a href="services.html">Dog Services |</a>
-                    <a href="products.html">Dog Care</a>
+                    <a href="contact.php">Contact Us |</a>
+                    <a href="blog.php">Posts |</a>
+                    <a href="services.php">Dog Services |</a>
+                    <a href="products.php">Dog Care</a>
                 </p>
             </div>
             <div class="col-md-6 text-md-right">
