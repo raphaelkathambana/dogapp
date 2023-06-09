@@ -7,23 +7,17 @@ if (isset($_COOKIE["session"])) {
     header("Location: login.html");
     exit();
 }
-
+include_once "layout/header.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/style.css" />
-    <link rel="shortcut icon" href="/images/icons8_paw_prints.ico" type="image/x-icon" />
     <title>Pawsitive Puppers</title>
 </head>
 
 <body>
-    <?php include_once "layout/header.php";?>
+    <?php include_once "layout/navbar.php"; ?>
     <div class="section-heading">
         <h3 class="text-center">Pawsitive Puppers</h3>
     </div>
@@ -76,12 +70,13 @@ if (isset($_COOKIE["session"])) {
             <form class="form-subscribe mt-4">
                 <div class="form-group d-flex">
                     <input type="email" class="form-control mr-2" placeholder="Enter your email" name="email"
-                        data-ddg-inputtype="identities.emailAddress" data-ddg-autofill="true" /><input type="submit"
-                        class="w-100 btn btn-lg btn-primary" value="Subscribe" />
+                        data-ddg-inputtype="identities.emailAddress" data-ddg-autofill="true" />
+                    <input type="submit" class="w-100 btn btn-lg btn-primary" value="Subscribe" st />
                 </div>
             </form>
         </div>
     </div>
-    <?php include_once "layout/footer.php";?>
+    <?php include_once "layout/footer.php"; ?>
 </body>
+
 </html>
