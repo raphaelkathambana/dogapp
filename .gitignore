@@ -1,6 +1,3 @@
-$ echo .vscode/settings.json >> .gitignore
-  
-$ git rm --cached .vscode/settings.json
-rm '.vscode/settings.json'
-  
-$ git commit -m "Start ignoring .vscode/settings.json"
+.env
+.vscode
+/vendor
