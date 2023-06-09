@@ -219,17 +219,11 @@ a:hover {
 }
 
 .untree_co--site-section {
-  padding: 5rem 0 0;
   position: relative;
   clear: both;
   width: 100%;
 }
 
-@media (max-width: 991.98px) {
-  .untree_co--site-section {
-    padding: 4rem 0;
-  }
-}
 .form-container {
   width: 100%;
   max-width: 400px;
