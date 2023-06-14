@@ -14,13 +14,13 @@
         <a href="products.php" class="navbar-items">Dog Care</a>
         <a href="contact.php" class="navbar-items">Contact Us</a>
         <?php if (isset($_COOKIE["session"])): ?>
-            <a href="profile.html" class="navbar-items">
+            <a href="profile.php" class="navbar-items">
                 <?php echo $username; ?>
             </a>
             <a href="logout.php" class="navbar-items">Log Out</a>
         <?php else: ?>
             <a href="login.html" class="navbar-items">Login</a>
-            <a href="register.html" class="navbar-items">Register</a>
+            <a href="register.php" class="navbar-items">Register</a>
         <?php endif ?>
         <input type="checkbox" name="check-box" id="check-box" />
         <div class="hamburger-lines">

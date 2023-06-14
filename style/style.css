@@ -638,4 +638,17 @@ footer ul li {
 
 .navbar-container input[type=checkbox]:hover ~ .hamburger-lines .line3 {
   background-color: #c79974;
+}
+
+.profile {
+  padding: 3rem;
+  background-color: #9a5c30;
+  max-width: 400px;
+  height: 500px;
+}
+.profile h3:after {
+  background: #e7e2df;
+}
+.profile h1, .profile h3, .profile p {
+  color: #e7e2df;
 }/*# sourceMappingURL=style.css.map */

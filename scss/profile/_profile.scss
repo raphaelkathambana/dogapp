@@ -1,0 +1,13 @@
+@use "../util" as ut;
+.profile {
+    padding: 3rem;
+    background-color: ut.$secondaryColor;
+    max-width: 400px;
+    height: 500px;
+    & h3:after {
+        background: ut.$mainColor;
+    }
+    & h1, h3, p {
+        color: ut.$mainColor;
+    }
+}

@@ -13,11 +13,9 @@ include_once "layout/header.php";
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Our Products</title>
 </head>
-
 <body>
     <?php include_once "layout/navbar.php"; ?>
     <div class="untree_co--site-section">
