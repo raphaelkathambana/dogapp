@@ -13,16 +13,24 @@ include_once "layout/header.php";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Change Password</title>
 </head>
+
 <body>
     <?php include_once "layout/navbar.php"; ?>
-    <form action="emailReset.php" method="post">
-        <h3>Enter your email: </h3>
-        <input type = "text" name ="user-email"><br><br>
-        <input type="submit" value="Send Verification" name="verify">
+    <div class="section-heading">
+        <h3 class="text-center">Reset Your Password</h3>
+    </div>
+    <form action="emailReset.php" method="post" class="form-container heading">
+        <label for="user-email">
+            <h3>Enter your email: </h3>
+        </label>
+        <input type="text" name="user-email" id="user-email" class="form-control"><br><br>
+        <input type="submit" value="Send Verification" name="verify" class="w-100 btn btn-lg btn-primary">
     </form>
     <?php include_once "layout/footer.php"; ?>
 </body>
+
 </html>
