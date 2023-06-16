@@ -35,15 +35,17 @@ include_once "layout/header.php";
 
 <body>
     <?php include_once "layout/navbar.php"; ?>
-    <form action="update.php" class="form-container" method="post">
-        <label for="name">Name</label>
-        <input class="form-control" type="text" name="name" id="name" value="<?php echo $name; ?>">
-        <label for="email">Email</label>
-        <input class="form-control" type="email" name="email" id="email" value="<?php echo $email; ?>">
-
-        <input class="btn btn-primary mt-3 mb-5" type="submit" name="update" value="Update Profile" />
-    </form>
-    <a href="changePassword.php">Change Password</a>
+    <div class="form-container">
+        <form action="update.php" method="post" class="form-signin">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name" value="<?php echo $name; ?>">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" value="<?php echo $email; ?>">
+    
+            <input class="btn btn-primary mt-3 m-10" type="submit" name="update" value="Update Profile" />
+        </form>
+        <a href="changePassword.php" class="btn btn-primary">Change Password</a>
+    </div>
     <?php include_once "layout/footer.php"; ?>
 </body>
 
