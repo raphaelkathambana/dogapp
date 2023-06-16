@@ -4,5 +4,4 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/style.css" />
     <link rel="shortcut icon" href="/images/icons8_paw_prints.ico" type="image/x-icon" />
-    <title></title>
 </head>

@@ -1,8 +1,3 @@
-<head>
-    <link rel="stylesheet" href="/style/style.css" />
-    <link rel="shortcut icon" href="/images/icons8_paw_prints.ico" type="image/x-icon" />
-    <title></title>
-</head>
 <nav class="navbar">
     <div class="navbar-container">
         <a href="/">
