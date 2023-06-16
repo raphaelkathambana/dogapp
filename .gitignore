@@ -2,3 +2,4 @@
 .vscode
 /vendor
 .json
+.vscode/settings.json
