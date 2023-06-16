@@ -4,9 +4,9 @@ $email = "";
 $password = "";
 $name = "";
 if (isset($_POST["register"])) {
-    $email = $_POST["email"];
+    $email = strtolower($_POST["email"]);
     $password = $_POST["psw"];
-    $name = $_POST["first-name"] . " " . $_POST["last-name"];
+    $name = ucwords(strtolower(["first-name"] . " " . $_POST["last-name"]));
 
     var_dump($_POST);
 } else {
