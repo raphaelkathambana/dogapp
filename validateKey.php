@@ -14,15 +14,16 @@ include_once "layout/header.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Change Password</title>
+    <title>Validate Key</title>
 </head>
 <body>
     <?php include_once "layout/navbar.php"; ?>
-    <form action="emailReset.php" method="post">
-        <h3>Enter your email: </h3>
-        <input type = "text" name ="user-email"><br><br>
-        <input type="submit" value="Send Verification" name="verify">
+    <form action="verifyKey.php" class="form-container" method="post">
+        <label for="key">Enter Key</label>
+        <input class="form-control" type="text" name="key" id="key" />
+        <input class="btn btn-primary mt-3 mb-5" type="submit" name="verify-key" value="Validate" />
     </form>
     <?php include_once "layout/footer.php"; ?>
 </body>
+
 </html>

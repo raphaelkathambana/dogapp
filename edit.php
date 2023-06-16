@@ -1,6 +1,5 @@
 <?php
 require_once "auth.php";
-include_once "layout/header.php";
 if (isset($_COOKIE["session"])) {
     // User is logged in
     $username = $_COOKIE["session"];
@@ -24,17 +23,19 @@ if (mysqli_num_rows($result) > 0) {
     $name = $row['name'];
     $email = $row['email'];
 }
+include_once "layout/header.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Edit Your Profile/head></title>
+    <title>Edit Your Profile</title>
 </head>
 
 <body>
-    <form action="update.php" class="form-container">
+    <?php include_once "layout/navbar.php"; ?>
+    <form action="update.php" class="form-container" method="post">
         <label for="name">Name</label>
         <input class="form-control" type="text" name="name" id="name" value="<?php echo $name; ?>">
         <label for="email">Email</label>
@@ -43,6 +44,7 @@ if (mysqli_num_rows($result) > 0) {
         <input class="btn btn-primary mt-3 mb-5" type="submit" name="update" value="Update Profile" />
     </form>
     <a href="changePassword.php">Change Password</a>
+    <?php include_once "layout/footer.php"; ?>
 </body>
 
 </html>
