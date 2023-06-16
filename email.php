@@ -5,6 +5,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 //Load Composer's autoloader
 require_once 'vendor/autoload.php';
 
@@ -20,8 +22,8 @@ try {
     $mail->Port = 465;                    //SMTP port
     $mail->SMTPSecure = "ssl";
      //Enable SMTP authentication
-    $mail->Username = 'maya12raph@gmail.com'; // SMTP username
-    $mail->Password = 'rgrgelxypyhlikzu'; //SMTP password
+    $mail->Username = $_ENV['SMTP_USERNAME']; // SMTP username
+    $mail->Password = $_ENV['SMTP_PASSWORD']; //SMTP password
     $mail->SMTPSecure = "ssl";
 
     //Recipients
