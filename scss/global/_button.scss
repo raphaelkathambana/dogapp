@@ -1,0 +1,33 @@
+@use "../util" as util;
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: util.$textColor;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: util.$secondaryColor;
+    border: 1px solid util.$secondaryColor;
+    transition: color 300ms ease-in-out, background-color 0.15s ease-in-out, border-color 300ms ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    &-primary {
+        color: util.$textColor;
+        background-color: util.$ctaColor;
+        border-color: util.$ctaColor;
+    }
+    &-primary:hover {
+        color: #fff;
+        background-color: util.$ctaColor;
+        border-color: util.$ctaColor;
+    }
+
+    &-primary.focus,
+    &-primary:focus {
+        box-shadow: 0 0 0 0.2rem util.$ctaColor;
+    }
+}
+

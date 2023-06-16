@@ -1,0 +1,24 @@
+@use "../util" as util;
+
+footer {
+    & .container {
+        display: flex;
+        background-color: util.$secondaryColor;
+    }
+    padding-top: 2rem;
+    font-size: 15px;
+    & h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: util.$mainColor;
+    }
+    & a {
+        color: util.$mainColor;
+        &:hover {
+            color: util.$ctaColor;
+        }
+    }
+    & ul li {
+        margin-bottom: 10px;
+    }
+}

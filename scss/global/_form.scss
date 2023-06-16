@@ -1,0 +1,85 @@
+@use "../util" as util;
+.form-container {
+    width: 100%;
+	max-width: 400px;
+    margin: 0 auto;
+
+    & .heading-icon {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        & img {
+            width: 55px;
+        }
+    }
+}
+.form-control {
+    display: block;
+    width: 360px;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: util.$textColor;
+    background-color: util.$mainColor;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out;
+    &:focus {
+        border-color: #ffefeb;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(255, 137, 107, 0.25);
+    }
+}
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+
+    & .form-floating:focus-within {
+        z-index: 2;
+    }
+    & input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    & input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+.form-subscribe {
+    background-color: util.$mainColor;
+    background-size: auto 100% !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-origin: content-box !important;
+    transition: background 0s ease 0s !important;
+    & input[type="email"] {
+        background-color: #ffefeb;
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.sign-group {
+    flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    & input {
+        height: 3rem;
+        padding: 10px;
+        width: 100%;
+    }
+    & textarea {
+        width: 300px;
+    }
+}

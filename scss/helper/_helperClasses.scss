@@ -1,0 +1,45 @@
+.relative {
+    position: relative;
+}
+.flex {
+    display: flex;
+    &-jc-c {
+        justify-content: center;
+    }
+    &-ai-st {
+        align-items: stretch;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-se {
+        justify-content: space-evenly;
+    }
+}
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.m-10 {
+    margin-top: 10px;
+}
+
+.mt-4,
+.my-4 {
+    margin-top: 1.5rem !important;
+}
+.mb-5,
+.my-5 {
+    margin-bottom: 3rem !important;
+}
