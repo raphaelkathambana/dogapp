@@ -1,9 +1,10 @@
 <?php
 
 if (isset($_POST['verify-key'])) {
-    if (isset($_POST['key']) === "UUIIDDK") {
+    if (isset($_POST['key']) == "UUIIDDK") {
         header('Location: resetPassword.php');
     } else {
-        $keyInvalid = "Wrong Key Used";
+        echo "Wrong Key Used";
+        var_dump($_POST);
     }
 }
