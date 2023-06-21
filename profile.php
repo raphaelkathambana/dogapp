@@ -10,7 +10,7 @@ if (isset($_COOKIE["session"])) {
     exit();
 }
 $query = "SELECT * FROM users WHERE name = '$username';";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $email = $row['email'];
@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
     echo /*html*/"<br>" . "Nope";
 }
 $dogInfoQuery = "SELECT * FROM dog_info WHERE id = '$id';";
-$dogResult = mysqli_query($conn, $dogInfoQuery);
+$dogResult = mysqli_query($con, $dogInfoQuery);
 if (mysqli_num_rows($dogResult) > 0) {
     $dogRow = mysqli_fetch_array($dogResult);
     $name = $dogRow['dogName'];
@@ -27,7 +27,10 @@ if (mysqli_num_rows($dogResult) > 0) {
     $age = $dogRow['age'];
     $gender = $dogRow['gender'];
 } else {
-    echo /*html*/"<br>" . "Nope";
+    $name = '';
+    $breed = '';
+    $age = '';
+    $gender = '';
 }
 
 ?>
@@ -47,6 +50,10 @@ if (mysqli_num_rows($dogResult) > 0) {
                 <div class="section-heading">
                     <h3 class="text-center">Your Posts</h3>
                 </div>
+                <form action="posts/index.php" class="form-container">
+                    <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
+                    <input type="submit" class="form-control w-100 btn btn-lg btn-primary dark" value="See Your Posts" name="view-posts" id="view-posts">
+                </form>
             </div>
             <div class="bl-2">
                 <div class="section-heading">
