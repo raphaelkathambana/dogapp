@@ -15,7 +15,7 @@ if (isset($_POST["edit"])) {
 }
 
 $query = "SELECT * FROM users WHERE id = '$id';";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($con, $query);
 $name = "";
 $email = "";
 if (mysqli_num_rows($result) > 0) {
@@ -36,11 +36,12 @@ include_once "layout/header.php";
 <body>
     <?php include_once "layout/navbar.php"; ?>
     <div class="form-container">
-        <form action="update.php" method="post" class="form-signin">
+        <form action="update.php" method="post" class="form-signin" name="login">
             <label for="name">Name</label>
             <input class="form-control" type="text" name="name" id="name" value="<?php echo $name; ?>">
             <label for="email">Email</label>
             <input class="form-control" type="email" name="email" id="email" value="<?php echo $email; ?>">
+            <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
     
             <input class="btn btn-primary mt-3 m-10" type="submit" name="update" value="Update Profile" />
         </form>

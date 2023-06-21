@@ -13,8 +13,8 @@ if (isset($_POST["login"])) {
 
 $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password';";
 
-$result = mysqli_query($conn, $query);
-if (mysqli_num_rows($result) > 0) {
+$result = mysqli_query($con, $query);
+if (mysqli_num_rows($result) > 0 && mysqli_num_rows($result) < 2) {
     $row = mysqli_fetch_assoc($result);
     $session_duration = $remember_me ? 86400 * 30 : 180;
     setcookie("session", $row["name"], time() + $session_duration);

@@ -11,7 +11,7 @@ if (isset($_COOKIE["session"])) {
 }
 
 $query = "SELECT * FROM users;";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($con, $query);
 while ($row = mysqli_fetch_assoc($result)) {
     echo /*html*/"<p>" . $row['id'] . /*html*/"</p>";
     echo /*html*/"<p>" . $row['name'] . /*html*/"</p>";
@@ -40,7 +40,7 @@ include_once "layout/header.php";
         </tr>
         <?php
             $queries = "SELECT * FROM users;";
-            $users_res = $conn->query($queries);
+            $users_res = $con->query($queries);
             if ($users_res->num_rows > 0) {
                 while ($rows = mysqli_fetch_assoc($users_res)): ?>
                     <tr>

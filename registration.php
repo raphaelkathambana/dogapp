@@ -20,12 +20,14 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die("Error: Invalid email");
 }
 
-$hash_pass = password_hash($ConfPass, PASSWORD_DEFAULT);
+// $hash_pass = password_hash($ConfPass, PASSWORD_DEFAULT);
 $query = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password');";
 
-if ($conn->query($query)) {
+
+
+if ($con->query($query)) {
     $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password';";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($con, $query);
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $session_duration = 180;
@@ -33,5 +35,5 @@ if ($conn->query($query)) {
         header("Location: indexing.php");
     }
 } else {
-    die("Error" . $conn->error);
+    die("Error" . $con->error);
 }
