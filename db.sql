@@ -25,7 +25,7 @@ create table if not exists dog_info(
 );
 INSERT INTO dog_info VALUES (1, "Sparky", "German Shepherd", 9, "Male");
 
-DROP TABLE noteContent;
+DROP TABLE if exists noteContent;
 CREATE TABLE IF NOT EXISTS noteContent (
     id INT(11) primary key auto_increment,
     title varchar(255),
