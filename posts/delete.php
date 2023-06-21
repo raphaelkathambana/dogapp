@@ -1,5 +1,9 @@
-<?php 
-$conn = require_once 'Connection.php';
+<?php
+
+$conn = require_once '../auth.php';
+use Connection as conn;
+$conn = new conn;
+$notes = $conn->getNotes();
 
 $conn->deleteNote($_POST['id']);
 

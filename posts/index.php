@@ -1,14 +1,27 @@
 <?php
 
-
-$conn = require_once 'Connection.php';
+$conn = require_once '../auth.php';
+use Connection as conn;
+include_once "../layout/header.php";
+$conn = new conn;
 $notes = $conn->getNotes();
 
+if (isset($_COOKIE["session"])) {
+    // User is logged in
+    $username = $_COOKIE["session"];
+} else {
+    // User is not logged in
+    header("Location: login.html");
+    exit();
+}
+
 $selectedNote = [
+    0 => [
     'id' => '',
     "title" => '',
     "note_description" => '',
     "date_of_note" => ''
+    ]
 ];
 if (isset($_GET['id'])) {
     $selectedNote = $conn->getNoteById($_GET['id']);
@@ -19,14 +32,11 @@ if (isset($_GET['id'])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Notes App</title>
-    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
+    <?php include_once "../layout/navbar.php"; ?>
     <div>
         <form class="new-note" action="save.php" method="post">
             <input type="hidden" name="id" value="<?php echo $selectedNote[0]['id'] ?>">
@@ -62,6 +72,8 @@ if (isset($_GET['id'])) {
             <?php endforeach ?>
         </div>
     </div>
+    <?php include_once "../layout/footer.php"; ?>
+
 </body>
 
 </html>
