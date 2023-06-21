@@ -59,7 +59,7 @@ include_once "layout/header.php";
                                 placeholder="Message *"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn" value="Send" />
+                            <input type="submit" class="w-100 btn btn-lg btn-primary" value="Send" />
                         </div>
                     </form>
                 </div>
