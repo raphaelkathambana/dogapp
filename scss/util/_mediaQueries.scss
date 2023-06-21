@@ -3,6 +3,9 @@
     .navbar-items {
         visibility: hidden;
     }
+    .navbar-container input[type="checkbox"] {
+        z-index: 5;
+    }
     .review {
         display: flex;
         flex-direction: column;
@@ -34,6 +37,10 @@
     }
     .navbar-title, .hamburger-lines{
         visibility: hidden;
+        z-index: -2;
+    }
+    .navbar-container input[type="checkbox"] {
+        z-index: -5;
     }
     .blog-grid {
         &-item {

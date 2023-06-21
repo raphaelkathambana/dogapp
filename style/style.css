@@ -2,6 +2,9 @@
   .navbar-items {
     visibility: hidden;
   }
+  .navbar-container input[type=checkbox] {
+    z-index: 5;
+  }
   .review {
     display: flex;
     flex-direction: column;
@@ -30,6 +33,10 @@
   }
   .navbar-title, .hamburger-lines {
     visibility: hidden;
+    z-index: -2;
+  }
+  .navbar-container input[type=checkbox] {
+    z-index: -5;
   }
   .blog-grid-item {
     height: 350px;
@@ -498,6 +505,22 @@ footer ul li {
   background-color: #9a5c30;
   border-color: #9a5c30;
 }
+.btn-primary.form-control {
+  width: 100%;
+}
+.btn-primary.dark {
+  background-color: #2f2d2e;
+  color: #c79974;
+  transition: color 400ms ease-in-out, background-color 0.25s ease-in-out, border-color 400ms ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-primary.dark:hover {
+  color: #fff;
+  background-color: #c79974;
+  border-color: #c79974;
+}
+.btn-primary.dark.focus, .btn-primary.dark:focus {
+  box-shadow: 0 0 0 0.2rem #c79974;
+}
 
 .blog-grid {
   display: grid;
@@ -537,7 +560,6 @@ footer ul li {
   width: 40px;
   top: 12px;
   right: 1px;
-  z-index: 5;
   opacity: 0;
 }
 
