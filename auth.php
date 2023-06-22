@@ -9,9 +9,10 @@ $con = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], 
 
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
-} else {
-    echo "Connection Successfully established!!";
-}
+} 
+// else {
+//     echo "Connection Successfully established!!";
+// }
 class Connection {
     public PDO $pdo;
     public function __construct()
