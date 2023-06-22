@@ -31,7 +31,7 @@ if ($con->query($query)) {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $session_duration = 180;
-        setcookie("session", $row["name"], time() + $session_duration);
+        setcookie("session", $row["id"], time() + $session_duration);
         header("Location: indexing.php");
     }
 } else {
