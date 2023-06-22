@@ -13,13 +13,7 @@ if (isset($_POST['update'])) {
 if (isset($_POST['update-password'])) {
     var_dump($_POST);
     $password = $_POST['psw'];
-    $idQuery = "SELECT id FROM users WHERE name = '$username';";
-    $result = mysqli_query($con, $idQuery);
-    if (mysqli_num_rows($result) > 0 && mysqli_num_rows($result) < 2) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $id = $row["id"];
-        }
-    }
+    $id = $_COOKIE["session"];
     $query = "UPDATE users set `password` = '$password' WHERE '$id' = id;";
 } else {
     echo /*html*/"<br>" . "Nope";
