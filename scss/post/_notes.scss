@@ -1,3 +1,4 @@
+@use "../util" as ut;
 .new-note{
     width: 300px;
     margin: 0 auto;
@@ -20,8 +21,8 @@
     justify-content: center;
 }
 .note {
-    background-color: #ffda00;
-    color: black;
+    background-color: ut.$ctaColor;
+    color: ut.$textColor;
     width: 300px;
     display: inline-block;
     margin: 10px;
@@ -35,7 +36,10 @@
         font-weight: bold;
     }
     & .title a {
-        color: black;
+        color: ut.$textColor;
+        &:hover, :focus {
+            color: ut.$secondaryColor;
+            }
     }
     & .close {
         position: absolute;

@@ -764,8 +764,8 @@ footer ul li {
 }
 
 .note {
-  background-color: #ffda00;
-  color: black;
+  background-color: #c79974;
+  color: #2f2d2e;
   width: 300px;
   display: inline-block;
   margin: 10px;
@@ -778,7 +778,10 @@ footer ul li {
   font-weight: bold;
 }
 .note .title a {
-  color: black;
+  color: #2f2d2e;
+}
+.note .title a:hover, .note .title a :focus {
+  color: #9a5c30;
 }
 .note .close {
   position: absolute;
