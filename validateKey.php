@@ -1,12 +1,4 @@
 <?php
-if (isset($_COOKIE["session"])) {
-    // User is logged in
-    $username = $_COOKIE["session"];
-} else {
-    // User is not logged in
-    header("Location: login.html");
-    exit();
-}
 include_once "layout/header.php";
 echo "email was sent successfully";
 ?>

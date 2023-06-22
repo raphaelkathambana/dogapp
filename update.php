@@ -1,13 +1,6 @@
 <?php
 require_once "auth.php";
-if (isset($_COOKIE["session"])) {
-    // User is logged in
-    $username = $_COOKIE["session"];
-} else {
-    // User is not logged in
-    header("Location: login.html");
-    exit();
-}
+include_once "/layout/session.php";
 if (isset($_POST['update'])) {
     var_dump($_POST);
     $name = $_POST['name'];

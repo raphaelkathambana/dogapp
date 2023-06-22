@@ -5,3 +5,4 @@
     <link rel="stylesheet" href="/style/style.css" />
     <link rel="shortcut icon" href="/images/icons8_paw_prints.ico" type="image/x-icon" />
 </head>
+<?php include_once "session.php"; ?>

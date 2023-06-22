@@ -1,14 +1,7 @@
 <?php
 require_once "auth.php";
 echo /*html*/"<br>" . "admin in the house";
-if (isset($_COOKIE["session"])) {
-    // User is logged in
-    $username = $_COOKIE["session"];
-} else {
-    // User is not logged in
-    header("Location: login.html");
-    exit();
-}
+
 
 $query = "SELECT * FROM users;";
 $result = mysqli_query($con, $query);

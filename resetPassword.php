@@ -1,14 +1,6 @@
 <?php 
 require_once "auth.php";
 include_once "layout/header.php";
-if (isset($_COOKIE["session"])) {
-    // User is logged in
-    $username = $_COOKIE["session"];
-} else {
-    // User is not logged in
-    header("Location: login.html");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
