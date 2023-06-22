@@ -1,6 +1,6 @@
 <?php
 
-$conn = require_once '../auth.php';
+$conn = require_once 'auth.php';
 use Connection;
 $conn = new Connection;
 $notes = $conn->getNotes();
@@ -12,4 +12,4 @@ if (isset($id) && $id != '') {
     $conn->addNote($_POST);
 }
 
-header('Location: index.php');
+header('Location: yourPosts.php');
