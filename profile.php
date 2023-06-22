@@ -1,15 +1,8 @@
 <?php
 require_once "auth.php";
 include_once "layout/header.php";
-if (isset($_COOKIE["session"])) {
-    // User is logged in
-    $username = $_COOKIE["session"];
-} else {
-    // User is not logged in
-    header("Location: login.html");
-    exit();
-}
-$query = "SELECT * FROM users WHERE name = '$username';";
+$id = $_COOKIE['session'];
+$query = "SELECT * FROM users WHERE id = '$id';";
 $result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
@@ -50,10 +43,9 @@ if (mysqli_num_rows($dogResult) > 0) {
                 <div class="section-heading">
                     <h3 class="text-center">Your Posts</h3>
                 </div>
-                <form action="posts/index.php" class="form-container">
-                    <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
-                    <input type="submit" class="form-control w-100 btn btn-lg btn-primary dark" value="See Your Posts" name="view-posts" id="view-posts">
-                </form>
+                <div class="text-center">
+                    <a href="yourPosts.php" class="w-100 btn btn-lg btn-primary dark">See Your Posts</a>
+                </div>
             </div>
             <div class="bl-2">
                 <div class="section-heading">
