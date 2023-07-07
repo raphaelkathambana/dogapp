@@ -8,6 +8,7 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $email = $row['email'];
     $id = $row['id'];
+    $isAdmin = $row['admin'];
 } else {
     echo /*html*/"<br>" . "Nope";
 }
@@ -99,7 +100,9 @@ if (mysqli_num_rows($dogResult) > 0) {
                 <input type="hidden" name="user-id" value="<?php echo $id; ?>" />
                 <input type="submit" name="edit" class="w-100 btn btn-lg btn-primary" value="Edit Profile" />
             </form>
+            <?php if ($isAdmin == 1):?>
             <a href="admin.php" class="w-100 btn btn-lg btn-primary">Admin Dashboard</a>
+            <?php endif; ?>
         </div>
     </div>
     <?php include_once "layout/footer.php"; ?>

@@ -7,6 +7,7 @@ if (isset($_COOKIE["session"])) {
     if ($result = mysqli_query($con, $nameQuery)) {
         while ($row = mysqli_fetch_assoc($result)) {
             $username = $row['name'];
+            $isAdmin = $row['admin'];
         }
     }
 } else {
