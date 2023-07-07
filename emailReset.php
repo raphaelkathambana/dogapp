@@ -13,13 +13,10 @@ $dotenv->load();
 if (isset($_POST['verify'])) {
     if (!filter_var($_POST['user-email'], FILTER_VALIDATE_EMAIL)) {
         die("Error: Invalid email");
-    } else {
-        var_dump($_POST);
     }
 } else {
     echo /*html*/"<br>" . "Nope";
 }
-require_once "email.php";
 
 $mail = new PHPMailer(true);
 try {
