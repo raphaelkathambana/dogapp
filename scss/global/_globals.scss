@@ -285,3 +285,32 @@ a {
     padding-right: 15px;
     padding-left: 15px;
 }
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    background-color: transparent;
+
+    & caption {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: util.$textColor;
+        text-align: left;
+        caption-side: bottom;
+    }
+    & td {
+        border-bottom: 1px solid util.$secondaryColor;
+        border-left: 1px solid util.$secondaryColor;
+        padding: 10px;
+        vertical-align: top;
+        text-align: center;
+    }
+    & th {
+        border-bottom: 5px double util.$secondaryColor;
+        padding: 10px;
+        vertical-align: top;
+        text-align: center;
+    }
+}

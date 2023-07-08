@@ -338,6 +338,34 @@ a:hover {
   padding-left: 15px;
 }
 
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  background-color: transparent;
+}
+table caption {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #2f2d2e;
+  text-align: left;
+  caption-side: bottom;
+}
+table td {
+  border-bottom: 1px solid #9a5c30;
+  border-left: 1px solid #9a5c30;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+table th {
+  border-bottom: 5px double #9a5c30;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+
 .navbar {
   max-height: 48px;
   position: fixed;
