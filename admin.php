@@ -1,22 +1,12 @@
 <?php
 require_once "auth.php";
-echo /*html*/"<br>" . "admin in the house";
-
-
-$query = "SELECT * FROM users;";
-$result = mysqli_query($con, $query);
-while ($row = mysqli_fetch_assoc($result)) {
-    echo /*html*/"<p>" . $row['id'] . /*html*/"</p>";
-    echo /*html*/"<p>" . $row['name'] . /*html*/"</p>";
-    echo /*html*/"<p>" . $row['email'] . /*html*/"</p>";
-}
 include_once "layout/header.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Admin Page</title>
 </head>
 
 <body>
@@ -36,6 +26,7 @@ include_once "layout/header.php";
             $users_res = $con->query($queries);
             if ($users_res->num_rows > 0) {
                 while ($rows = mysqli_fetch_assoc($users_res)): ?>
+                <?php $idNum = $rows['id']; ?>
                     <tr>
                     <td>
                         <?php print $rows['id']; ?>
@@ -46,7 +37,7 @@ include_once "layout/header.php";
                     <td>
                         <?php print $rows["email"]; ?>
                     </td>
-                    <td>[ <a href="">Edit</a> ] [ <a href="">Del</a> ]</td>
+                    <td>[ <a href="edit.php?id=<?php echo $idNum; ?>">Edit</a> ] [ <a href="">Del</a> ]</td>
                     </tr>
                 <?php endwhile;
             } else {
