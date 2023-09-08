@@ -38,7 +38,7 @@ include_once "layout/header.php";
                     <p>+254-739-209908</p>
                 </div>
                 <div class="sign-group">
-                    <form>
+                    <form method="post" action="makeContact.php">
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" placeholder="Your Name *" value="" />
                         </div>
@@ -50,7 +50,7 @@ include_once "layout/header.php";
                                 placeholder="Message *"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="w-100 btn btn-lg btn-primary" value="Send" />
+                            <input type="submit" class="w-100 btn btn-lg btn-primary" value="Send" name="contact"/>
                         </div>
                     </form>
                 </div>
