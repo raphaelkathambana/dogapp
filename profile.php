@@ -8,7 +8,7 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $email = $row['email'];
     $id = $row['id'];
-    $isAdmin = $row['admin'];
+    $isAdmin = $row['is_admin'];
 } else {
     echo /*html*/"<br>" . "Nope";
 }
