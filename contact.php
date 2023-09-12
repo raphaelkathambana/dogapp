@@ -15,6 +15,14 @@ include_once "layout/header.php";
         <div class="container">
             <div class="section-heading">
                 <h3 class="display-4 text-center">Contact Us</h3>
+                <?php
+                    if (isset($_GET['success'])) {
+                        echo /*html*/ "<div class='alert alert-success' role='alert'>
+                        Email Sent Successfully!
+                        </div>";
+                        echo /*html*/ '<h5 class="display-4 text-center">Email Send</h5>';
+                    }
+                ?>
             </div>
             <p class="text-center">
                 Have a question, need assistance? We're just a message away!
