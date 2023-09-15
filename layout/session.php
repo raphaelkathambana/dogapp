@@ -1,5 +1,8 @@
 <?php
-require_once "auth.php";
+require_once 'vendor/autoload.php';
+$mysqliConn = new MysqliConnection();
+$con = $mysqliConn ->getConnection();
+
 if (isset($_COOKIE["session"])) {
     // User is logged in
     $id = $_COOKIE["session"];

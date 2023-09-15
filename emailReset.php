@@ -19,6 +19,9 @@ if (isset($_POST['verify'])) {
 }
 
 $mail = new PHPMailer(true);
+$rand = rand();
+$key = md5($rand);
+
 try {
     //Server settings
     $mail->isSMTP();
@@ -36,10 +39,10 @@ try {
     $mail->setFrom('maya12raph@gmail.com', 'Pawsitive Puppers');
     $mail->addAddress($_POST['user-email']); //Name is optional
     $mail->Subject = 'Reset Password';
-    $mail->Body = 'Enter the following key to reset your password\n UUIIDDK';
+    $mail->Body = "Enter the following key to reset your password. <br> $key";
     $mail->AltBody = 'Alt Reset Password Using Email';
     //Content
-    $mail->isHTML(false); //Set email format to HTML
+    $mail->isHTML(true); //Set email format to HTML
 
     $mail->send();
     echo 'Message has been sent';
