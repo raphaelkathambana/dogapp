@@ -1,6 +1,8 @@
 <?php
-use Connection as conn;
 include_once "layout/header.php";
+require_once 'vendor/autoload.php';
+
+use Connection as conn;
 $conn = new conn;
 $notes = $conn->getNotes();
 

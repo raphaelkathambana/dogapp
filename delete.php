@@ -1,6 +1,7 @@
 <?php
 
-$conn = require_once 'auth.php';
+require_once 'vendor/autoload.php';
+
 use Connection as conn;
 $conn = new conn;
 $notes = $conn->getNotes();

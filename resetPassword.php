@@ -1,5 +1,8 @@
 <?php 
-require_once "auth.php";
+require_once 'vendor/autoload.php';
+
+$mysqliConn = new MysqliConnection();
+$con = $mysqliConn ->getConnection();
 include_once "layout/header.php";
 ?>
 
@@ -14,7 +17,7 @@ include_once "layout/header.php";
     <div class="section-heading">
         <h3 class="text-center">Reset Password</h3>
     </div>
-    <form action="update.php" autocomplete="off" method="post">
+    <form action="update.php" autocomplete="off" method="post" class="form-container heading">
         <label for="new-password">Enter New Password</label>
         <input autocomplete="off" autofocus="on" class="form-control" type="password" name="psw" id="new-password" />
         <label for="new-password-confirm">Confirm New Password</label>

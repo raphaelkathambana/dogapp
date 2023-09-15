@@ -1,6 +1,10 @@
 <?php
-require_once "auth.php";
 include_once "layout/header.php";
+require_once 'vendor/autoload.php';
+
+$mysqliConn = new MysqliConnection();
+$con = $mysqliConn ->getConnection();
+
 $id = $_COOKIE['session'];
 $query = "SELECT * FROM users WHERE id = '$id';";
 $result = mysqli_query($con, $query);

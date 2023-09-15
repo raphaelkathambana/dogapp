@@ -1,5 +1,8 @@
 <?php
-require_once "auth.php";
+require_once 'vendor/autoload.php';
+
+$mysqliConn = new MysqliConnection();
+$con = $mysqliConn ->getConnection();
 include_once "/layout/session.php";
 $genQuery = function ($id, $name, $email, $connection) {
     $userQuery = "SELECT * FROM users WHERE id = '$id';";

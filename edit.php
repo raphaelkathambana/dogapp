@@ -1,5 +1,9 @@
 <?php
-require_once "auth.php";
+require_once 'vendor/autoload.php';
+
+$mysqliConn = new MysqliConnection();
+$con = $mysqliConn ->getConnection();
+
 if (isset($_POST["edit"])) {
     $userId = $_POST['user-id'];
 } else {

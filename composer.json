@@ -1,7 +1,7 @@
 {
     "autoload": {
         "files": [
-            "sendgridMail.php"
+            "sendgridMail.php", "auth.php"
         ]
     },
     "require": {
